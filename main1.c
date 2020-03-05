@@ -2,6 +2,7 @@
 
 int main()
 {
+
     int stop = 0;
     int x;
     int y;
@@ -81,22 +82,26 @@ int main()
     msleep(1700);
     create_disconnect();
     
+
     while (gmpc(0) < distance)
     {
         motor(0, 80);
     }
     ao();
     
+
     create_connect();
     create_drive_direct(0,180);
     msleep(1300);
     create_disconnect();
+
     
     while (gmpc(0) > 0)
     {
         motor(0, -80);
     }
     
+
     create_connect();
     create_drive_direct(0,100);
     msleep(1000);
@@ -120,5 +125,6 @@ int main()
     
     ao();
    
+
     return 0;
 }
